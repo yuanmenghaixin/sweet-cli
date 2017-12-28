@@ -1,11 +1,8 @@
 {
-  "name": "sweet-cli",
+  "name": "@sweetui/sweet-cli",
   "author": "Geely SweetUI Group",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "这是一个sweet命令行库",
-  "publishConfig": {
-    "registry": "http://10.200.45.216:8081/repository/npm-geely/"
-  },
   "main": "bin/sweet.js",
   "bin": {
     "sweet": "bin/sweet.js"
@@ -14,6 +11,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@sweetui/sweet-demo": "^1.3.31",
+    "babel": "^6.5.2",
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-1": "^6.16.0",
     "chokidar": "^1.6.1",
     "colors": "^1.1.2",
     "commander": "^2.9.0",
@@ -24,14 +26,9 @@
     "mkdirp": "^0.5.1",
     "postcss": "^5.2.16",
     "postcss-selector-parser": "^2.2.3",
-    "update-notifier": "^1.0.2",
-    "xmldom": "^0.1.22",
-    "babel": "^6.5.2",
-    "babel-cli": "^6.18.0",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-stage-1": "^6.16.0",
     "rimraf": "^2.6.2",
-    "sweet-demo": "^1.3.31"
+    "update-notifier": "^1.0.2",
+    "xmldom": "^0.1.22"
   },
   "license": "MIT"
 }

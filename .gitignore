@@ -1,3 +1,5 @@
 node_modules
 sweet-loader
 test
+*.log
+yarn.lock
