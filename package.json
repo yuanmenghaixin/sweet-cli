@@ -30,5 +30,9 @@
     "update-notifier": "^1.0.2",
     "xmldom": "^0.1.22"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "koa": "^2.4.1",
+    "marked": "^0.3.9"
+  }
 }
