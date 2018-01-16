@@ -1,0 +1,9 @@
+{
+    "options": [{
+    	"name": "sweet-docs",
+    	"description": "sweet文档系统",
+    	"targetPath": "/Users/huyingjun/MY_WORK/GitHub/",
+    	"gitclone": true,
+    	"mdPath": "https://github.com/sweetui/sweet-ui-docs.git"
+    }]
+}

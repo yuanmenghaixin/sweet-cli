@@ -19,7 +19,9 @@ sCli
 		.option('--spever [version]','使用new生成sweet项目时，生成指定版本的空项目',version)
 		.option('--empty', '使用new生成sweet项目时，构建出一个空项目')
 		.option('--demo', '使用new生成sweet项目时，构建出一个demo项目')
-		.option('--git', '使用markdown生成文档json时，<path>为github上的地址');
+		.option('--git', '使用markdown生成文档json时，<path>为github上的地址')
+		.option('--marked', '使用markdown生成文档json时，是否选择要编译')
+		.option('--config', '使用markdown生成文档json时，是否要根据config.json来配置，设置该参数后，[path]为config.json文件路径');
 
 //new指令
 sCli
@@ -38,10 +40,14 @@ sCli
 		})
 //markdown指令
 sCli
-		.command('markdown <path>')
+		.command('markdown <path> [targetPath]')
 		.description('根据指定路径，寻找可用的md文件，生成json')
-		.action(mdPath => {
-			DOCS.generateDocs(mdPath,sCli);
+		.action((mdPath, targetPath = './') => {
+			const devs = {
+				mdPath,
+				targetPath
+			};
+			DOCS.generateDocs(devs,sCli);
 		})
 
 //将输入源丢给sCli进行处理
