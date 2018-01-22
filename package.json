@@ -1,7 +1,7 @@
 {
   "name": "@sweetui/sweet-cli",
   "author": "Geely SweetUI Group",
-  "version": "1.1.8",
+  "version": "1.2.0",
   "description": "这是一个sweet命令行库",
   "main": "./bin/sweet.js",
   "bin": {
@@ -34,6 +34,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "koa": "^2.4.1"
+    "koa": "^2.4.1",
+    "spawn-sync": "^1.0.15"
   }
 }
