@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+/**
+ * Created by liuzhengdong
+ * 2018-04-27
+ */
 
 const program = require('commander')
 const configs = require('../package.json')
