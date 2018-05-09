@@ -2,26 +2,25 @@
  * Created by liuzhengdong
  * 2018-04-27
  */
+
 const fs = require('fs')
 const path = require('path')
 const inquirer = require('inquirer')
 const rimraf = require('rimraf')
 const chalk = require('chalk')
-const Creator = require('./Creator')
+const Creator = require('../lib/mobile/Creator')
+const spinner = require('ora')()
 
+/**
+ * mobile create
+ * @return {Promise.<void>}
+ */
 async function create() {
   let targetDir = path.resolve('.')
   const options = {}
 
-  const { ok } = await inquirer.prompt([
-    {
-      name: 'ok',
-      type: 'confirm',
-      message: `Generate project in current directory?`
-    }
-  ])
-  if (!ok) return
-  const files = fs.readdirSync(targetDir)
+  // 这里忽略.git目录
+  const files = fs.readdirSync(targetDir).filter(f => f !== '.git')
   if (files.length > 0) {
     const { action } = await inquirer.prompt([
       {
@@ -35,12 +34,16 @@ async function create() {
         ]
       }
     ])
+    console.log()
     if (!action) {
       return
     } else if (action === 'overwrite') {
+      spinner.text = chalk.red('Cleaning up the file')
+      spinner.start()
       files.forEach(f => {
         rimraf.sync(f)
       })
+      spinner.stop()
     }
   }
   options.name = path.parse(targetDir).name
@@ -55,7 +58,8 @@ async function create() {
     'Version',
     'Author',
     'Description',
-  ].map(file => require(`./promptModules/${file}`))
+  ].map(file => require(`../lib/mobile/promptModules/${file}`))
+
   const creator = new Creator(targetDir, promptModules)
   await creator.create(options)
 }

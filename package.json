@@ -1,11 +1,12 @@
 {
-  "name": "@sweetui/sweet-mobile-cli",
+  "name": "@sweetui/sweet-cli",
   "author": "SweetUI Group",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "description": "这是一个sweet mobile 命令行库",
-  "main": "./bin/zd-cli.js",
+  "main": "./bin/sweet.js",
   "bin": {
-    "sweet-cli": "./bin/sweet-cli.js"
+    "sweet": "./bin/sweet.js",
+    "sweet-init": "./bin/sweet-init.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
