@@ -17,10 +17,15 @@ const spinner = require('ora')()
  */
 async function create() {
   let targetDir = path.resolve('.')
-  const options = {}
+  const options = {
+    isGit: false // .git目录是否存在
+  }
 
   // 这里忽略.git目录
-  const files = fs.readdirSync(targetDir).filter(f => f !== '.git')
+  const files = fs.readdirSync(targetDir).filter(f => {
+    if (f === '.git') options.isGit = true
+    return f !== '.git'
+  })
   if (files.length > 0) {
     const { action } = await inquirer.prompt([
       {
