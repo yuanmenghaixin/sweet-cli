@@ -1,7 +1,7 @@
 {
   "name": "@sweetui/sweet-cli",
   "author": "SweetUI Group",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "这是一个sweet mobile 命令行库",
   "main": "./bin/sweet.js",
   "bin": {
