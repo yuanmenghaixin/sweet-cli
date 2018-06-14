@@ -1,0 +1,14 @@
+{
+    "inquirer":
+    {
+        "create": "是否要在当前目录创建新工程?",
+        "created": "正在构建 ${1} 项目",
+        "select-type": "请选择工程类型:",
+        "action": {
+        	"message": "当前目录 ${1} 不为空. 请选择操作:",
+        	"overwrite": "覆盖",
+        	"merge": "合并",
+        	"cancel": "取消"
+        }
+    }
+}

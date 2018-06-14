@@ -10,6 +10,7 @@ const rimraf = require('rimraf')
 const chalk = require('chalk')
 const Creator = require('../lib/mobile/Creator')
 const spinner = require('ora')()
+const { translate } = require('../lib/Tool');
 
 /**
  * mobile create
@@ -31,11 +32,11 @@ async function create() {
       {
         name: 'action',
         type: 'list',
-        message: `The current directory ${chalk.cyan(targetDir)}  contains files. Pick an action:`,
+        message: translate(global.lang.inquirer.action.message, [targetDir]),
         choices: [
-          { name: 'Overwrite', value: 'overwrite' },
-          { name: 'Merge', value: 'merge' },
-          { name: 'Cancel', value: false }
+          { name: translate(global.lang.inquirer.action.overwrite), value: 'overwrite' },
+          { name: translate(global.lang.inquirer.action.merge), value: 'merge' },
+          { name: translate(global.lang.inquirer.action.cancel), value: false }
         ]
       }
     ])

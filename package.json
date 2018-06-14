@@ -5,8 +5,7 @@
   "description": "这是一个sweet mobile 命令行库",
   "main": "./bin/sweet.js",
   "bin": {
-    "sweet": "./bin/sweet.js",
-    "sweet-init": "./bin/sweet-init.js"
+    "sweet": "./bin/sweet.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,6 +19,7 @@
     "inquirer": "5.2.0",
     "ora": "2.0.0",
     "process": "0.11.10",
+    "require-dir": "^0.3.2",
     "rimraf": "2.6.2"
   }
 }

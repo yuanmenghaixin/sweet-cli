@@ -1,0 +1,14 @@
+{
+    "inquirer":
+    {
+        "create": "Generate project in current directory?",
+        "created": "Building the ${1} project",
+        "select-type": "Please select the project type:",
+        "action": {
+        	"message": "The current directory ${1}  contains files. Pick an action:",
+        	"overwrite": "Overwrite",
+        	"merge": "Merge",
+        	"cancel": "Cancel"
+        }
+    }
+}
