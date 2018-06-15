@@ -6,6 +6,8 @@ const inquirer = require('inquirer')
 const i18n = require('../lib/i18n');
 const { translate } = require('../lib/Tool');
 
+global.sweetConfig = require('../package.json')['SWEET-CONFIG']
+
 /**
  * chose language
  */
@@ -19,9 +21,7 @@ inquirer.prompt([{
         { name: 'en', value: 'en' },
     ]
 }]).then(result => {
-    global = {
-      lang: i18n(result.project)
-    }
+    global.lang = i18n(result.project);
     create();
 })
 
