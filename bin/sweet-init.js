@@ -55,15 +55,9 @@ function selectType() {
         console.log()
         console.log(translate(global.lang.inquirer.created, [answers.project]))
         console.log()
-        if (answers.project === 'mobile') {
-            // 执行mobile工程cli
-            require('./mobile')()
-        } else {
-            // 执行pc工程cli
-            /**
-             * todo pc project
-             */
-        }
+        // 根据全局变量来执行web工程cli
+        global.projectType = answers.project;
+        require('./web')()
     }).catch(error => {
         console.log()
         console.log(chalk.red(error))

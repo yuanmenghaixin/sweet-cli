@@ -8,7 +8,13 @@
         	"message": "当前目录 ${1} 不为空. 请选择操作:",
         	"overwrite": "覆盖",
         	"merge": "合并",
-        	"cancel": "取消"
+        	"cancel": "取消",
+        	"clean": "正在清空文件..",
+        	"download": "正在下载模板..",
+        	"downloaded": "模板下载成功，目标路径为 ${1} ",
+        	"installing": "# 正在安装工程依赖..",
+        	"created": "# ${1} 工程创建成功",
+        	"installed": "# 依赖安装成功"
         }
     }
 }

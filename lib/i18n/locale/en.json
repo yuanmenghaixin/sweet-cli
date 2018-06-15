@@ -8,7 +8,13 @@
         	"message": "The current directory ${1}  contains files. Pick an action:",
         	"overwrite": "Overwrite",
         	"merge": "Merge",
-        	"cancel": "Cancel"
+        	"cancel": "Cancel",
+        	"clean": "Cleaning up the file..",
+        	"download": "downloading template..",
+        	"downloaded": "template download success path ${1}",
+        	"installing": "# Installing project dependencies..",
+        	"created": "# ${1} project create success",
+        	"installed": "# Installation success"
         }
     }
 }

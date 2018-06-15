@@ -8,7 +8,10 @@ const path = require('path')
 const inquirer = require('inquirer')
 const rimraf = require('rimraf')
 const chalk = require('chalk')
-const Creator = require('../lib/mobile/Creator')
+const Creator = {
+  mobile: require('../lib/mobile/Creator'),
+  pc: require('../lib/pc/Creator')
+}
 const spinner = require('ora')()
 const { translate } = require('../lib/Tool');
 
@@ -44,7 +47,7 @@ async function create() {
     if (!action) {
       return
     } else if (action === 'overwrite') {
-      spinner.text = chalk.red('Cleaning up the file')
+      spinner.text = chalk.red(global.lang.inquirer.action.clean)
       spinner.start()
       files.forEach(f => {
         rimraf.sync(f)
@@ -64,9 +67,9 @@ async function create() {
     'Version',
     'Author',
     'Description',
-  ].map(file => require(`../lib/mobile/promptModules/${file}`))
+  ].map(file => require(`../lib/${global.projectType}/promptModules/${file}`))
 
-  const creator = new Creator(targetDir, promptModules)
+  const creator = new Creator[global.projectType](targetDir, promptModules)
   await creator.create(options)
 }
 
