@@ -4,17 +4,26 @@
         "create": "是否要在当前目录创建新工程?",
         "created": "正在构建 ${1} 项目",
         "select-type": "请选择工程类型:",
-        "action": {
-        	"message": "当前目录 ${1} 不为空. 请选择操作:",
-        	"overwrite": "覆盖",
-        	"merge": "合并",
-        	"cancel": "取消",
-        	"clean": "正在清空文件..",
-        	"download": "正在下载模板..",
-        	"downloaded": "模板下载成功，目标路径为 ${1} ",
-        	"installing": "# 正在安装工程依赖..",
-        	"created": "# ${1} 工程创建成功",
-        	"installed": "# 依赖安装成功"
+        "action":
+        {
+            "message": "当前目录 ${1} 不为空. 请选择操作:",
+            "overwrite": "覆盖",
+            "merge": "合并",
+            "cancel": "取消",
+            "clean": "正在清空文件..",
+            "download": "正在下载 ${1} ..",
+            "downloaded": "下载成功，目标路径为 ${1} ",
+            "download-fail": "下载 ${1} 失败, 确保下载地址正确后请再次尝试 ！",
+            "installing": "# 正在安装工程依赖..",
+            "created": "# ${1} 工程创建成功",
+            "installed": "# 依赖安装成功"
         }
+    },
+    "markdown":
+    {
+        "building": "正在构建md文档json文件...",
+        "build-success": "# 构建成功",
+        "readconfig": "正在读取配置文件 ${1} ...",
+        "readconfig-success": "读取配置文件 ${1} 成功 !"
     }
 }

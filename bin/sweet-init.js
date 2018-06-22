@@ -3,27 +3,30 @@
 const program = require('commander')
 const chalk = require('chalk')
 const inquirer = require('inquirer')
-const i18n = require('../lib/i18n');
+const tool = require('../lib/Tool.js')
 const { translate } = require('../lib/Tool');
-
 global.sweetConfig = require('../package.json')['SWEET-CONFIG']
+
+tool.getConfig(() => {
+    create();
+})
 
 /**
  * chose language
  */
 
-inquirer.prompt([{
-    name: 'project',
-    type: 'list',
-    message: `请选择语言 Please select the language.`,
-    choices: [
-        { name: 'zh-CN', value: 'zh-CN' },
-        { name: 'en', value: 'en' },
-    ]
-}]).then(result => {
-    global.lang = i18n(result.project);
-    create();
-})
+// inquirer.prompt([{
+//     name: 'project',
+//     type: 'list',
+//     message: `请选择语言 Please select the language.`,
+//     choices: [
+//         { name: 'zh-CN', value: 'zh-CN' },
+//         { name: 'en', value: 'en' },
+//     ]
+// }]).then(result => {
+//     global.lang = i18n(result.project);
+//     create();
+// })
 
 
 /**

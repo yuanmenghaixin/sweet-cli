@@ -1,6 +1,8 @@
 node_modules
 sweet-loader
 test
+test.json
 *.log
 yarn.lock
 download
+.config
