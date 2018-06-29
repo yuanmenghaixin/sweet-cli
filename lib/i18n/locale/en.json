@@ -27,5 +27,10 @@
         "build-success": "# building success",
         "readconfig": "reading the configs file ${1} ...",
         "readconfig-success": "read the configs file ${1} success !"
+    },
+    "config":
+    {
+        "set-success": "setting up successfully !",
+        "set-lang-error": "The language package does not exist, please reset it ~"
     }
 }

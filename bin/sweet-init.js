@@ -6,7 +6,6 @@ const inquirer = require('inquirer')
 const tool = require('../lib/Tool.js')
 const { translate } = require('../lib/Tool');
 global.sweetConfig = require('../package.json')['SWEET-CONFIG']
-
 /**
  * chose language
  */

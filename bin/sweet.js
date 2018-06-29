@@ -11,6 +11,7 @@ sCli
   .option('-v','显示版本号',function(){
 		console.log(version);
 	})
+	.option('--lang <language>', '修改语言')
 	.option('--demo', '使用init构建时可以选择构建demo项目')
 	.option('--git', '使用markdown生成文档json时，<path>为github上的地址')
 	.option('--marked', '使用markdown生成文档json时，是否选择要编译')
@@ -22,6 +23,13 @@ sCli
 	.description('generate a new project from a template   创建一个新的工程')
 	.action(() => {
 		require('./sweet-init.js')(sCli)
+	})
+
+sCli
+	.command('config')
+	.description('edit configs')
+	.action(() => {
+		tool.setConfig(sCli)
 	})
 
 // 生成文档指令
