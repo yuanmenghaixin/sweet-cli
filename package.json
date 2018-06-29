@@ -6,7 +6,8 @@
   "SWEET-CONFIG": {
     "git": {
       "mobile": "sweetui/sweet-mobile-template",
-      "pc": "sweetui/sweet-template"
+      "pc": "sweetui/sweet-template",
+      "demo-pc": "sweetui/sweet-demo-2.x"
     }
   },
   "main": "./bin/sweet.js",

@@ -2,8 +2,10 @@
     "inquirer":
     {
         "create": "是否要在当前目录创建新工程?",
+        "createDemo": "是否要在当前目录下载项目demo?",
         "created": "正在构建 ${1} 项目",
         "select-type": "请选择工程类型:",
+        "select-type-demo": "请选择demo类型:",
         "action":
         {
             "message": "当前目录 ${1} 不为空. 请选择操作:",

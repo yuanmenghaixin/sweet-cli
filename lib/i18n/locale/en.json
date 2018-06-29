@@ -2,8 +2,10 @@
     "inquirer":
     {
         "create": "Generate project in current directory?",
+        "createDemo": "Download project demo in current directory?",
         "created": "Building the ${1} project",
         "select-type": "Please select the project type:",
+        "select-type-demo": "Please select the demo type:",
         "action":
         {
             "message": "The current directory ${1}  contains files. Pick an action:",

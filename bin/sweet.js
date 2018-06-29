@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+const inquirer = require('inquirer')
 var sCli = require('commander'),
 		version = require('../package').version,
 		DOCS = require('../lib/docs'),
@@ -11,14 +11,18 @@ sCli
   .option('-v','显示版本号',function(){
 		console.log(version);
 	})
+	.option('--demo', '使用init构建时可以选择构建demo项目')
 	.option('--git', '使用markdown生成文档json时，<path>为github上的地址')
 	.option('--marked', '使用markdown生成文档json时，是否选择要编译')
 	.option('--config', '使用markdown生成文档json时，是否要根据config.json来配置，设置该参数后，[path]为config.json文件路径')
 
 // 创建工程指令 默认执行sweet-init.js
 sCli
-	.command('init', 'generate a new project from a template   创建一个新的工程')
-
+	.command('init')
+	.description('generate a new project from a template   创建一个新的工程')
+	.action(() => {
+		require('./sweet-init.js')(sCli)
+	})
 
 // 生成文档指令
 sCli
