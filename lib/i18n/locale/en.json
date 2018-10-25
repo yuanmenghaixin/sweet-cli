@@ -1,36 +1,33 @@
 {
-    "inquirer":
-    {
-        "create": "Generate project in current directory?",
-        "createDemo": "Download project demo in current directory?",
-        "created": "Building the ${1} project",
-        "select-type": "Please select the project type:",
-        "select-type-demo": "Please select the demo type:",
-        "action":
-        {
-            "message": "The current directory ${1}  contains files. Pick an action:",
-            "overwrite": "Overwrite",
-            "merge": "Merge",
-            "cancel": "Cancel",
-            "clean": "Cleaning up the file..",
-            "download": "downloading ${1}..",
-            "downloaded": "download success, targetPath: ${1}",
-            "download-fail": "download ${1} error, please make sure your download-url and try again !",
-            "installing": "# Installing project dependencies..",
-            "created": "# ${1} project create success",
-            "installed": "# Installation success"
-        }
-    },
-    "markdown":
-    {
-        "building": "building markdown json ...",
-        "build-success": "# building success",
-        "readconfig": "reading the configs file ${1} ...",
-        "readconfig-success": "read the configs file ${1} success !"
-    },
-    "config":
-    {
-        "set-success": "setting up successfully !",
-        "set-lang-error": "The language package does not exist, please reset it ~"
+  "inquirer": {
+    "create": "Generate project in current directory?",
+    "createDemo": "Download project demo in current directory?",
+    "created": "Building the ${1} project",
+    "select-type": "Please select the project type:",
+    "select-type-demo": "Please select the demo type:",
+    "select-branch": "Please select the module version you want to download.",
+    "action": {
+      "message": "The current directory ${1}  contains files. Pick an action:",
+      "overwrite": "Overwrite",
+      "merge": "Merge",
+      "cancel": "Cancel",
+      "clean": "Cleaning up the file..",
+      "download": "downloading ${1}..",
+      "downloaded": "download success, targetPath: ${1}",
+      "download-fail": "download ${1} error, please make sure your download-url and try again !",
+      "installing": "# Installing project dependencies..",
+      "created": "# ${1} project create success",
+      "installed": "# Installation success"
     }
+  },
+  "markdown": {
+    "building": "building markdown json ...",
+    "build-success": "# building success",
+    "readconfig": "reading the configs file ${1} ...",
+    "readconfig-success": "read the configs file ${1} success !"
+  },
+  "config": {
+    "set-success": "setting up successfully !",
+    "set-lang-error": "The language package does not exist, please reset it ~"
+  }
 }
