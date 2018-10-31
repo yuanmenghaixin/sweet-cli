@@ -1,7 +1,7 @@
 {
   "name": "@sweetui/sweet-cli",
   "author": "SweetUI Group",
-  "version": "2.0.12-beta",
+  "version": "2.1.0",
   "description": "这是一个sweet mobile 命令行库",
   "SWEET-CONFIG": {
     "git": {
@@ -28,7 +28,8 @@
     "ora": "2.0.0",
     "process": "0.11.10",
     "require-dir": "^0.3.2",
-    "rimraf": "2.6.2",
+    "rimraf": "^2.6.2",
     "spawn-sync": "^2.0.0"
-  }
+  },
+  "devDependencies": {}
 }
